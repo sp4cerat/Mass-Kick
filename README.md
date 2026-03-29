@@ -47,90 +47,64 @@ The data show a **mild preference** for Γ > 0 but do not require it. The best-f
 **Broader context.** The Mass-Kick sector is embedded in a two-field EFT that also motivates gauge-friction inflation, U(1)_{B−L} Chern-Simons baryogenesis (η_B consistent to 𝒪(1)), and a running vacuum coefficient |α_eff| ∼ 3×10⁻³ from the dark SU(2) gauge sector. These connections are programmatic; only the Mass-Kick is tested against data in this work.
 
 ---
+## Hypothesis: Candidate “World Equation”
 
-## Hypothesis: candidate “world equation”
+At the framework level, the broader Effective Field Theory (EFT) program explored in this repository can be summarized by two coupled relations.
 
-At the framework level, the broader EFT program explored in this repository can be summarized by two coupled relations.
+### Unified Action
 
-### Unified action
+$$S_{\rm Universe} = S_{\rm grav+vacuum}[g, \chi] + S_{\rm gauge+baryo}[g, \chi, A, B, N_R] + S_{\rm DM}[\tilde{g}(\chi), \varphi]$$
 
-`S_Universe = S_grav+vacuum[g, chi] + S_gauge+baryo[g, chi, A, B, N_R] + S_DM[g_tilde(chi), phi]`
+### Conformal Dark-Sector Coupling
 
-### Conformal dark-sector coupling
-
-`g_tilde_munu = A(chi)^2 g_munu`
+$$\tilde{g}_{\mu\nu} = A(\chi)^2 g_{\mu\nu}$$
 
 with
 
-`A(chi) = sqrt(1 + (Gamma/2) * cos(chi / f_chi))`
+$$A(\chi) = \sqrt{1 + \frac{\Gamma}{2} \cos\left(\frac{\chi}{f_\chi}\right)}$$
 
-### Interpretation
+### Interpretation: Solving 8 Cosmological Puzzles
 
-In words:
+This single theoretical framework is mathematically designed to simultaneously address **eight major unsolved puzzles** in modern physics by assigning specific roles to the terms in the action:
 
-- `chi` controls the vacuum-sector dynamics across cosmic epochs
-- the dark sector evolves in the effective metric `g_tilde_munu`
-- the rolling of `chi` induces a transient dark-matter mass shift (“mass-kick”)
-- the same EFT architecture may connect early-universe dynamics, late-time clustering anomalies, and dark-sector phenomenology
+1. **The Nature of Dark Matter (WIMP Crisis):** Addressed by $S_{\rm DM}$, which models dark matter not as standard WIMPs, but as a pNGB vacuum field $\varphi$ that avoids classical gauge couplings.
+2. **The Hubble Tension ($H_0$):** Addressed by $S_{\rm grav+vacuum}$. The field $\chi$ acts as Early Dark Energy (EDE) before recombination, shrinking the sound horizon and raising $H_0$.
+3. **The $S_8$ Tension (Clustering):** Addressed by the conformal coupling $\tilde{g}_{\mu\nu}$. As $\chi$ rolls, it triggers a "Mass-Kick" (a transient drop in dark matter mass), which suppresses late-time structure growth.
+4. **The Mechanism of Inflation:** Addressed by the interplay of $S_{\rm grav+vacuum}$ and $S_{\rm gauge+baryo}$. The rolling $\chi$ drives inflation, while dark $SU(2)$ gauge fields ($A$) provide the necessary gauge-friction to stabilize it.
+5. **Baryogenesis (Matter-Antimatter Asymmetry):** Addressed by $S_{\rm gauge+baryo}$. The rolling $\chi$ field couples to a $U(1)_{B-L}$ gauge sector ($B$), driving the non-thermal production of right-handed neutrinos ($N_R$) to generate the baryon asymmetry.
+6. **The Nature of Dark Energy:** Addressed by $S_{\rm grav+vacuum}$, where the residual potential of $\chi$ at its minimum provides the baseline vacuum energy driving late-time acceleration.
+7. **Dynamical Dark Energy (DESI Anomalies):** Addressed by $S_{\rm gauge+baryo}$. Adiabatic renormalization of the dark gauge fields generates a running vacuum coefficient ($\alpha_{\rm eff} \sim 10^{-3}$), allowing dark energy to evolve dynamically over cosmic time.
+8. **The QM vs. GR Interface (and CP Violations):** The covariant action $S_{\rm Universe}$ bridges quantum field theory (Chern-Simons gauge couplings, chiral anomalies) and general relativity (conformal metrics) in a single, strictly isolated EFT architecture.
 
-### Scope note
+### Scope Note
 
-The current repository and accompanying paper do **not** claim to establish this full unified program.  
-What is implemented and tested here is the **late-time conformal mass-kick sector** and its exploratory cosmological phenomenology in `CLASS_EDE`.
+The current repository and accompanying paper do **not** claim to establish this full unified program quantitatively.  
+What is implemented and strictly tested here is the **late-time conformal mass-kick sector** (addressing the $H_0$ and $S_8$ tensions) and its exploratory cosmological phenomenology in `CLASS_EDE`.
 
-The broader “world-equation” interpretation should therefore be read as a **framework-level hypothesis**, not as a completed derivation of all sectors.
+The broader “world-equation” interpretation should therefore be read as a **framework-level hypothesis**, providing the theoretical motivation, rather than a completed derivation of all early-universe sectors.
 
-## Variable glossary
+## Variable Glossary
 
-- `S_Universe`  
-  Total effective action of the proposed framework.
+* $S_{\rm Universe}$: Total effective action of the proposed framework.
+* $S_{\rm grav+vacuum}$: Gravity plus vacuum-sector action, including the spacetime metric $g$ and the rolling scalar field $\chi$.
+* $S_{\rm gauge+baryo}$: Gauge and baryogenesis sector, schematically including dark gauge fields ($A$), the $U(1)_{B-L}$ sector ($B$), and right-handed neutrinos ($N_R$).
+* $S_{\rm DM}$: Dark-matter sector, written in terms of the effective conformally transformed metric $\tilde{g}(\chi)$ and the dark-sector field $\varphi$.
+* $g_{\mu\nu}$: Einstein-frame spacetime metric.
+* $\tilde{g}_{\mu\nu}$: Effective metric seen by the conformally coupled dark sector.
+* $A(\chi)$: Conformal coupling function that controls how strongly the rolling field $\chi$ distorts the dark-sector metric.
+* $\chi$: Rolling vacuum-sector scalar field. In the broader framework, it drives early- and late-time vacuum dynamics; in this repository's code, it drives the mass-kick mechanism.
+* $\varphi$: Dark-sector field appearing in the dark-matter action.
+* $\Gamma$: Dimensionless mass-kick coupling parameter controlling the amplitude of the conformal modulation.
+* $f_\chi$: Characteristic field-space scale associated with the oscillatory coupling structure of $\chi$.
+* $A, B, N_R$: Schematic placeholders for the dark $SU(2)$ gauge fields, the $U(1)_{B-L}$ gauge sector, and the right-handed neutrino sector used in the broader inflation and baryogenesis programs.
 
-- `S_grav+vacuum[g, chi]`  
-  Gravity plus vacuum-sector action, including the spacetime metric `g` and the rolling scalar field `chi`.
-
-- `S_gauge+baryo[g, chi, A, B, N_R]`  
-  Gauge and baryogenesis sector, schematically including dark gauge fields, the `U(1)_(B-L)` sector, and right-handed neutrinos.
-
-- `S_DM[g_tilde(chi), phi]`  
-  Dark-matter sector, written in terms of the effective conformally transformed metric `g_tilde(chi)` and dark-sector field `phi`.
-
-- `g_munu`  
-  Einstein-frame spacetime metric.
-
-- `g_tilde_munu`  
-  Effective metric seen by the conformally coupled dark sector.
-
-- `A(chi)`  
-  Conformal coupling function that controls how strongly the rolling field `chi` distorts the dark-sector metric.
-
-- `chi`  
-  Rolling vacuum-sector scalar field. In the broader framework it is associated with early- and late-time vacuum dynamics; in the present repository it drives the mass-kick mechanism.
-
-- `phi`  
-  Dark-sector field appearing in the dark-matter action.
-
-- `Gamma`  
-  Dimensionless mass-kick coupling parameter controlling the amplitude of the conformal modulation.
-
-- `f_chi`  
-  Characteristic field-space scale associated with the oscillatory coupling structure of `chi`.
-
-- `A`  
-  Schematic placeholder for dark gauge fields (for example the dark `SU(2)` sector).
-
-- `B`  
-  Schematic placeholder for the `U(1)_(B-L)` gauge sector.
-
-- `N_R`  
-  Right-handed neutrino sector used in the broader baryogenesis program.
-
-## Practical meaning for this repository
+## Practical Meaning for this Repository
 
 For the purposes of the present codebase, the most important relation is:
 
-`g_tilde_munu = A(chi)^2 g_munu`
+$$\tilde{g}_{\mu\nu} = A(\chi)^2 g_{\mu\nu}$$
 
-because this is the relation that generates the late-time conformal dark-matter mass shift implemented in `CLASS_EDE`.
+Because this is the exact mathematical relation that generates the late-time conformal dark-matter mass shift implemented in our modified `CLASS_EDE` source code.
 
 ---
 
