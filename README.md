@@ -2,7 +2,7 @@
 
 **First implementation and exploratory constraints from Planck, BAO, and SH0ES**
 
-Sven Forstmann (Independent Research, Konstanz, Germany)  
+Sven Forstmann (Independent Research, Germany)  
 📧 info@svenforstmann.com
 
 > **Paper:** [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)
